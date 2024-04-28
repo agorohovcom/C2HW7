@@ -3,7 +3,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         task1(List.of(1, 1, 2, 3, 4, 4, 5, 5, 6, 7));
-        task2(List.of(1, 1, 2, 3, 4, 4, 5, 5, 6, 7));
+        task2(List.of(1, 24, 4, 5, 5, 6, 1, 2, 54, 3, 4, 7));
         task3("ехал грека через реку видит грека в реке рак сунул грека руку в реку рак за руку греку цап");
         task4(List.of("один", "два", "два", "три", "три", "три"));
     }
@@ -18,7 +18,7 @@ public class Main {
     }
 
     public static void task2(Collection<Integer> numbers) {
-        Set<Integer> numsSet = new HashSet<>(numbers);
+        Set<Integer> numsSet = new TreeSet<>(numbers);
         for (Integer i : numsSet) {
             if (i % 2 == 0) {
                 System.out.print(i + " ");
